@@ -28,6 +28,17 @@ This project heavily emphasizes core OOP principles:
 
 **1. Clone the repository:**
 ```bash
-git clone 
-cd 
+git clone https://github.com/MihneaG17/OOP-Hotel-Management.git
+cd OOP-Hotel-Management
+```
+
+**2. Compile the source code:**
+Ensure you have a modern C++ compiler installed (e.g., g++). Run the following command in the project directory:
+```bash
+g++ main.cpp Clase/Angajat.cpp Clase/Persoana.cpp Clase/Camera.cpp Clase/Client.cpp Clase/Rezervare.cpp Clase/Review.cpp Clase/Hotel.cpp Clase/Receptioner.cpp Clase/Ingrijitor.cpp Clase/Bucatar.cpp Clase/Manager.cpp Clase/Administrator.cpp Clase/utils.cpp -o program
+```
+
+**3. Run the application:**
+```bash
+./program
 ```

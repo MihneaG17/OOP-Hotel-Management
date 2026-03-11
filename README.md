@@ -1,10 +1,33 @@
-# Proiect OOP - Sistem de management pentru hotel - Dobrin Mihnea-Gabriel - Grupa 143
- - Proiect realizat in C++ pentru materia Programare Orientata pe Obiecte. </br>
- - Acest proiect presupune proiectarea unui Sistem de management pentru hotel. Cand programul este rulat, utilizatorul are 2 optiuni - deschiderea meniului pentru clienti si deschiderea meniului pentru administrator. Fiecare meniu diferite optiuni, cum ar fi: vizualizarea camerelor disponibile, efectuarea unei rezervari, anularea unei rezervari (pentru clienti), optiuni legate de gestionarea angajatilor, precum si de vizualizare a statisticilor din hotel (numar de angajati, rezervari efectuate, clienti inregistrati etc).
- - Datele sunt stocate in fisiere .txt, iar la rularea programului datele deja existente in aceste fisiere sunt incarcate in vectori pentru a permite operatii asupra lor. </br>
- - Proiectul este realizat respectand cerintele si coding guideline-ul primit in cadrul laboratorului de POO.
- - Pentru a rula programul, este necesara crearea manuala a executabilului. Se ruleaza in cmd, in folderul in care sunt salvate fisierele proiectului, urmatoarea comanda:
- `g++ main.cpp Clase/Angajat.cpp Clase/Persoana.cpp Clase/Camera.cpp Clase/Client.cpp Clase/Rezervare.cpp Clase/Review.cpp Clase/Hotel.cpp Clase/Receptioner.cpp Clase/Ingrijitor.cpp Clase/Bucatar.cpp Clase/Manager.cpp Clase/Administrator.cpp Clase/utils.cpp -o program`. Se va crea un fisier .exe care poate fi rulat tot in cmd introducand comanda `[nume-fisier].exe`.
- - Pentru optiunea Administrator din meniu este necesara introducerea unui mail si a unei parole. Credentialele asteptate pentru permiterea logarii sunt `admin@gmail.com` (mail) si `admin123` (parola) ❗.
- - Proiectul a fost scris in Visual Studio Code.
+<div align="center">
+  <h1>🏨 C++ Hotel Management System (OOP)</h1>
+  <p>A comprehensive console-based application built in C++ to demonstrate Object-Oriented Programming principles through hotel administration.</p>
+</div>
 
+---
+
+## 📌 Short Description
+Developed for the **Object-Oriented Programming (OOP)** course (Year 1), this project simulates a fully functional Hotel Management System. It provides interactive CLI menus for both Clients and Administrators, allowing dynamic management of bookings, room availability, and hotel staff. The system persistently stores data using file I/O operations, ensuring data is not lost between sessions.
+
+## 💻 Tech Stack & Concepts
+![C++](https://img.shields.io/badge/C++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+
+This project heavily emphasizes core OOP principles:
+* **Inheritance:** A base `Persoana` class is extended by `Client` and `Angajat`. The `Angajat` class is further specialized into sub-roles like `Bucatar`, `Ingrijitor`, `Receptioner`, and `Manager`.
+* **Polymorphism:** Staff members are managed through a unified vector of pointers (`std::vector<Angajat*>`), utilizing `dynamic_cast` at runtime to access role-specific behaviors (e.g., extracting specific attributes like a Chef's certifications when exporting to files).
+* **Encapsulation:** All class attributes are protected and strictly accessed via Getter and Setter methods to maintain state integrity.
+* **Abstraction:** The central orchestration `Hotel` class aggregates instances of `Camera`, `Rezervare`, `Client`, and `Angajat` to run the entire system.
+
+## ✨ Key Features
+
+* **👥 Interactive User Roles:** Dedicated menu flows for `Client` (view rooms, book, leave reviews) and `Administrator` (manage staff, view all bookings).
+* **💼 Advanced HR Management:** Admins can hire or fire staff, dynamically adjust salaries (`MaresteSalariuAdmin`, `MicsoreazaSalariuAdmin`), and view global HR statistics. Each staff role has unique traits (e.g., `Ingrijitor` manages specific floors, `Bucatar` holds an array of specialized certifications).
+* **🛏️ Booking Engine:** Handles room assignment, calculates total prices, applies dynamic discounts (`CalcularePretDupaDiscount`), and tracks different payment methods.
+* **💾 Data Persistence:** The state of the hotel (rooms, bookings, staff, clients) is automatically loaded from and serialized back to text files during execution.
+
+## 🚀 Setup & Execution
+
+**1. Clone the repository:**
+```bash
+git clone 
+cd 
+```
